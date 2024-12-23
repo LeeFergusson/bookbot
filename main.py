@@ -1,11 +1,8 @@
-# Project: bookbot
-# Description: Main file for the project
-# Author: Lee Fergusson
+""" main.py - Main entry point for the bookbot project """
 
-# Main entry point for the bookbot project
 def main():
-    pass
+    """Main entry point for the bookbot project"""
+    print("Hello, world!")
 
 
-# Run the main function
 main()
