@@ -34,7 +34,7 @@ def count_unique_characters(string):
     return result
 
 def sort_characters(characters):
-    """ Returns the dvalue of the first element in a dictionary"""
+    """ Returns the value of the first element in a dictionary"""
     return characters[1]
 
 def print_report(file_name, word_count, unique_characters):
