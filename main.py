@@ -24,10 +24,11 @@ def count_unique_characters(string):
 
     for character in string:
         lower_character = character.lower()
-        if lower_character in result:
-            result[lower_character] += 1
-        else:
-            result[lower_character] = 1
+        if lower_character.isalpha():
+            if lower_character in result:
+                result[lower_character] += 1
+            else:
+                result[lower_character] = 1
 
     return result
 
