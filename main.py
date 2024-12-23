@@ -33,16 +33,16 @@ def count_unique_characters(string):
                 result[lower_character] = 1
     return result
 
-def sort_on(list):
-    """ Returns the value of the first element in a dictionary"""
-    return list[1]
+def sort_characters(characters):
+    """ Returns the dvalue of the first element in a dictionary"""
+    return characters[1]
 
 def print_report(file_name, word_count, unique_characters):
     """Prints a report of the word count and unique characters"""
     print(f"--- Report for {file_name} ---")
     print("Word Count: ", word_count)
     char_list = list(unique_characters.items())
-    char_list.sort(reverse=True, key=sort_on)
+    char_list.sort(reverse=True, key=sort_characters)
 
     for char in char_list:
         print(f"The '{char[0]}' character appears {char[1]} times.")
