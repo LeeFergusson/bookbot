@@ -2,10 +2,12 @@
 
 def main():
     """Main entry point for the bookbot project"""
-    contents = read_file("books/frankenstein.txt")
+    file_name = "books/frankenstein.txt"
+    contents = read_file(file_name)
     print(contents)
-    print("Word Count: ", count_words(contents))
-    print("Unique Characters: ", count_unique_characters(contents))
+    word_count = count_words(contents)
+    characters = count_unique_characters(contents)
+    print_report(file_name, word_count, characters)
 
 def read_file(file_path):
     """Reads a file and returns the contents as a string"""
@@ -29,7 +31,22 @@ def count_unique_characters(string):
                 result[lower_character] += 1
             else:
                 result[lower_character] = 1
-
     return result
+
+def sort_on(list):
+    """ Returns the value of the first element in a dictionary"""
+    return list[1]
+
+def print_report(file_name, word_count, unique_characters):
+    """Prints a report of the word count and unique characters"""
+    print(f"--- Report for {file_name} ---")
+    print("Word Count: ", word_count)
+    char_list = list(unique_characters.items())
+    char_list.sort(reverse=True, key=sort_on)
+
+    for char in char_list:
+        print(f"The '{char[0]}' character appears {char[1]} times.")
+
+    print("--- End of Report ---")
 
 main()
