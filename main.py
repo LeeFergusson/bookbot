@@ -1,8 +1,9 @@
 """ main.py - Main entry point for the bookbot project """
+import sys
 
 def main():
     """Main entry point for the bookbot project"""
-    file_name = "books/frankenstein.txt"
+    file_name = sys.argv[1]
     contents = read_file(file_name)
     print(contents)
     word_count = count_words(contents)
